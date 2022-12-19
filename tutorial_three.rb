@@ -5,6 +5,11 @@ loop do
     print "Enter operator +,-,*,/ : "
     oper = gets.chomp()
 
+    while oper != "+" and oper !="-" and oper != "*" and oper != "/"
+        print "Enter operator +,-,*,/ : "
+        oper = gets.chomp()
+    end
+
     print "Enter Second Number : "
     num2 = gets.chomp().to_i
 
