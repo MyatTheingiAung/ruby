@@ -1,7 +1,7 @@
 row = 5
 col = row *2 -1 
 for i in 0..5
-    for j in 0..col+1 do
+    for j in 0..col+1 
         if j >= row - i and j <= row + i
             print "*"
         else

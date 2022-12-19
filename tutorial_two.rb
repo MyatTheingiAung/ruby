@@ -53,7 +53,7 @@ end
 
 if now.day < birth_day
 
-    month = month - 1
+    month = month != 0? month - 1 : month
 
     if birth_month == 4 or birth_month == 6 or birth_month == 9 or birth_month == 11
         day = (now.day + 30) - birth_day
