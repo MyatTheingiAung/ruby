@@ -1,16 +1,21 @@
 class Person
-    attr_accessor :name
+    @name
 
-    def print_name()
-        puts "Person name is #{name}"
+    def print_name(name)
+        @name = name
+        p "Person name is #{@name}"
     end
 end
 
 class Student < Person
     attr_accessor :name , :roll_number
+    def initialize(name, roll_number)
+        @name = name
+        @roll_number = roll_number
+    end
 
     def print_roll()
-        puts "Student roll number is #{roll_number}"
+        puts "Student roll number is #{@roll_number}"
     end
 end
 
@@ -26,16 +31,15 @@ if choose == "Person"
     print "Enter name : "
     name = gets.chomp()
     person = Person.new()
-    person.name = name
-    person.print_name()
+    person.print_name(name)
 else
     print "Enter name : "
     name = gets.chomp()
     print "Enter roll number : "
     roll_number = gets.chomp()
-    student = Student.new
-    student.name = name
+    student = Student.new(name,roll_number)
+    # student.name = name
     student.print_name()
-    student.roll_number = roll_number
+    # student.roll_number = roll_number
     student.print_roll()
 end
